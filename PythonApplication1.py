@@ -271,3 +271,9 @@ print('\n\nOriginal vs Predicted ratings:\n')
 for i in range(len(my_ratings)):
     if my_ratings[i] > 0:
         print(f'Original {my_ratings[i]}, Predicted {my_predictions[i]:0.2f} for {movieList.loc[i,"title"]}')        
+        
+
+filter=(movieList["number of ratings"] > 20)
+movieList["pred"] = my_predictions
+movieList_df = movieList.reindex(columns=["pred", "mean rating", "number of ratings", "title"])
+movieList_df.loc[ix[:300]].loc[filter].sort_values("mean rating", ascending=False)

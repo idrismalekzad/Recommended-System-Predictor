@@ -55,7 +55,16 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\small_movies_b.csv" />
+    <Content Include="Database\small_movies_R.csv" />
+    <Content Include="Database\small_movies_W.csv" />
+    <Content Include="Database\small_movies_X.csv" />
+    <Content Include="Database\small_movies_Y.csv" />
+    <Content Include="Database\small_movie_list.csv" />
     <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
